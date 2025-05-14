@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.static_framework = true
 
-  s.source       = { :http => "https://github.com/jieniliu/ffmpeg-kit-ios/releases/download/6.0/ffmpeg-kit-ios-6.0.xcframework.zip" }
+  s.source       = { :http => "https://github.com/jieniliu/ffmpeg-kit-ios/releases/download/6.0/ffmpeg-kit-ios-6.0.zip" }
 
   s.prepare_command = <<-CMD
     unzip -o ffmpeg-kit-ios-6.0.xcframework.zip -d extracted
