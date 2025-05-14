@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.prepare_command = <<-CMD
     unzip -o ffmpeg-kit-ios-6.0.zip -d extracted
-    mv extracted/*.xcframework .
+    mv extracted/ffmpeg-kit-ios-6.0/*.xcframework .
   CMD
 
   s.libraries = ["z", "bz2", "c++", "iconv"]
