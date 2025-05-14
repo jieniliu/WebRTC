@@ -15,12 +15,11 @@ Pod::Spec.new do |s|
   s.source       = { :http => "https://github.com/jieniliu/ffmpeg-kit-ios-audio/releases/download/6.0/ffmpeg-kit-ios-audio-6.0.xcframework.zip" }
 
   s.prepare_command = <<-CMD
-    unzip ffmpeg-kit-ios-audio-6.0.xcframework.zip
-    find . -name "*.xcframework" -maxdepth 3 -exec mv {} . \\;
+    unzip -o ffmpeg-kit-ios-audio-6.0.xcframework.zip -d extracted
+    mv extracted/*.xcframework .
   CMD
 
   s.libraries = ["z", "bz2", "c++", "iconv"]
-
   s.frameworks = ["AudioToolbox", "AVFoundation", "CoreMedia", "VideoToolbox"]
 
   s.vendored_frameworks = [
@@ -33,4 +32,9 @@ Pod::Spec.new do |s|
     "libswresample.xcframework",
     "libswscale.xcframework"
   ]
+
+  s.exclude_files = ["*.zip"]
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES'
+  }
 end
