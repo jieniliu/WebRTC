@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source       = { :http => "https://github.com/jieniliu/ffmpeg-kit-ios/releases/download/6.0/ffmpeg-kit-ios-6.0.zip" }
 
   s.prepare_command = <<-CMD
-    unzip -o ffmpeg-kit-ios-6.0.xcframework.zip -d extracted
+    unzip -o ffmpeg-kit-ios-6.0.zip -d extracted
     mv extracted/*.xcframework .
   CMD
 
