@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "12.1"
   s.requires_arc = true
+
+
+  s.source = { :http => "https://github.com/jieniliu/WebRTC/releases/download/4.0/WebRTC-4.0.xcframework.zip" }
   s.static_framework = false
-
-  s.source = { :http => "https://github.com/jieniliu/WebRTC/releases/download/4.0/WebRTC-4.0.xcframework.zip
-" }
-
+  
   s.prepare_command = <<-CMD
     unzip -o WebRTC-4.0.xcframework.zip
   CMD
