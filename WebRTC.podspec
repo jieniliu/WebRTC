@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "12.1"
   s.requires_arc = true
   s.static_framework = false
-  s.requires_frameworks = true
 
   s.source = { :http => "https://github.com/jieniliu/WebRTC/releases/download/4.0/WebRTC-4.0.xcframework.zip" }
 
