@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source = { :http => "https://github.com/jieniliu/WebRTC/releases/download/4.0/WebRTC-4.0.zip" }
 
   s.prepare_command = <<-CMD
-    unzip -o WebRTC-4.0.zip
+    unzip -o WebRTC-4.0.xcframework.zip
   CMD
 
   s.libraries = ["z", "bz2", "c++", "iconv"]
