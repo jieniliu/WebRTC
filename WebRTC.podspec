@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "12.1"
   s.requires_arc = true
-  s.static_framework = true
+  s.static_framework = false
 
   s.source = { :http => "https://github.com/jieniliu/WebRTC/releases/download/4.0/WebRTC-4.0.xcframework.zip
 " }
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = [
     "WebRTC.xcframework",
   ]
-  s.static_framework = true
+
   s.exclude_files = ["*.zip"]
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES'
